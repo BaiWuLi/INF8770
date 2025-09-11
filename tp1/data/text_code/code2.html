@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personality QuiZ 0</title>
+        <style type = "text/css">
+           html{
+               background-color: #2b3e50;
+           } 
+            body{
+                background-color: white;
+                font-family: Verdana, sans-serif;
+                font-size: 100%;
+                text-align: center;
+                width: 800px;
+                margin: 10px auto;
+                padding: 20px;
+                border-radius: 1em;
+            }
+
+            h1{
+                color: cadetblue;
+            }
+            h3.question{
+                font-size: 2em;
+
+            }
+            .info{
+                font-size: 1.5em;
+            }
+
+            .answer{
+                background-color: #df691a;
+                color: white;
+                border-radius: 10px;
+                padding: 1em;
+                text-align: center;
+                cursor: pointer;
+                width: 60%;
+                font-size: 1.5em;
+                margin: 10px auto 0;
+            }
+
+            .answer:hover{
+                background-color: cadetblue;
+
+            }
+            .selected{
+                background-color: cadetblue;
+            }
+            .button{
+                background-color: cadetblue;
+                color: white;
+                border-radius: 10px;
+                padding: 10px 5px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 2em;
+            }
+            .mini.button{
+                display:block;
+                width: 30%;
+            }
+            .next{
+                float:right;
+            }
+            .previous{
+                float:left;
+            }
+            .button:hover{
+                background-color: #80b7b9;
+            }
+            .button-holder{
+                width:60%;
+                padding: 5em 0;
+                margin: 5em auto;
+            }
+            .clearfix:before,
+            .clearfix:after{
+                content:"";
+                display: table;
+            }
+            .clearfix:after{
+                clear:both;
+            }
+            .response p{
+                margin: 50px auto;
+                font-size: 3em;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>what kind of person are you?</h1>
+        <div id="quiz-area">
+            <section class="q-n-a">
+                <h3 class="question">1. J’aime pratiquer des activités variées et nouvelles.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+            <div class="button-holder clearfix">
+                <div class="previous mini button">previous</div><div class="next mini button">next</div>
+            </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question">2. J’ai tendance à faire confiance aux autres.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+            <div class="button-holder clearfix">
+                <div class="previous mini button">previous</div><div class="next mini button">next</div>
+            </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question">3. Je suis quelqu’un de prudent(e) et j’ai les pieds sur terre.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>    
+            </section>
+            <section class="q-n-a">
+                <h3 class="question">4. J’aide les autres quand ils ont besoin de moi.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >5. J’ai tendance à être anxieux(se), tendu(e).</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >6. Je prends du plaisir à me laisser aller à des rêveries.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >7. J’aime faire la fête avec beaucoup de gens autour de moi.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >8. Je suis honnête et ne pourrais pas tromper les autres.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >9. Je n’ai pas une bonne opinion de moi-même.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >10. Je suis fidèle aux engagements que je prends.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >11. Je ressens parfois des frissons lorsque j’écoute de la musique.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >12. Je m’inquiète et m’angoisse très facilement, même pour des choses
+                    sans importance.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >13. Je suis de nature généreuse.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >14. J’aime plaisanter et m’amuser avec les autres.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >15. Je suis quelqu’un de méthodique et de très organisé.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >16. J’ai tendance à me sentir inférieur(e) aux autres.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >17. J’ai tendance à pardonner et ne suis pas rancunier(ère).</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >18. J’accorde une grande importance à mes sentiments
+                    et à ceux des autres.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >19. Je n’agis jamais sans réfléchir aux conséquences.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >20. Je me cultive en lisant, en regardant des émissions scientifiques
+                    ou culturelles à la télévision.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >21. Je fais généralement les choses avec enthousiasme et excitation.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >22. Je me mets facilement en colère.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >23. J’aime faire plaisir à ma famille et mes amis.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >24. J’ai beaucoup d’imagination.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >25. J’aime lorsque le rythme de ma vie est intense et rapide.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >26. Je préfère valoriser les autres que moi-même.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >27. Je m’investis beaucoup dans tout ce que j’entreprends.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >28. Je me vexe souvent.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >29. J’aime me tenir informé(e) et savoir ce qui se passe dans le monde.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >30. Je suis poli(e) et respectueux(se) quand je parle aux autres.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >31. J’aime me trouver au cœur de l’action.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >32. Je suis impulsif(ve) et contrôle mal mes émotions et mes sentiments.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >33. Je travaille dur jusqu’à ce que j’obtienne ce que je souhaite.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >34. Je prends du plaisir à réfléchir sur de grandes questions
+                    existentielles portant sur l’homme, la nature, l’Univers.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >35. Je suis très sociable et me fais facilement des amis.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >36. Je me dispute facilement avec les autres pour des choses
+                    sans importance.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >37. Je suis souvent de mauvaise humeur.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >38. Je suis soucieux(se) de respecter mes principes moraux.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >39. J’aimerais beaucoup voyager et découvrir les coutumes,
+                    les habitudes de vie des autres pays.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >40. Je pense que la plupart des personnes sont honnêtes et gentilles.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >41. Je suis respectueux(se) des règles et des interdits.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >42. Je dis aux autres ce que je pense.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >43. Je cherche à rompre la monotonie et les habitudes.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >44. Je fais les choses avec soin et vérifie que mon travail est bien fait.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >45. Je me sens souvent triste.</h3>
+                <div class="answers" data-value="4">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >46. Je partage mes affaires avec mes amis.</h3>
+                <div class="answers" data-value="2">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >47. Je parle facilement, même avec des inconnus.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >48. J’aime connaître et apprendre des choses nouvelles.</h3>
+                <div class="answers" data-value="5">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >49. Je recherche le meilleur et la perfection dans tout ce que je fais.</h3>
+                <div class="answers" data-value="3">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+            <section class="q-n-a">
+                <h3 class="question" >50. Je suis une personne optimiste et généralement de bonne humeur.</h3>
+                <div class="answers" data-value="1">
+                    <div class="answer" data-value="0">Tout à fait vrai</div>
+                    <div class="answer" data-value="1">plutot vrai</div>
+                    <div class="answer" data-value="2">plutot faux</div>
+                    <div class="answer" data-value="3">tout a fait faux</div>
+                </div>
+                <div class="button-holder clearfix">
+                    <div class="previous mini button">previous</div><div class="next mini button">next</div>
+                </div>
+            </section>
+        </div>
+            <div class="button finish" style="display:none;">What Am I?</div>
+            <div class="response " style="display:block;">
+                <p></p>
+                <div class="missed button" style="display:none;">Check answers</div>
+            </div>
+            <!--<div class="response2 " style="display:block;"><p></p></div>-->
+        <!--------------------------jquerry!-------------------------------------------->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <!--any JQ plugins go here-->
+        <script type="text/javascript">
+            var questions= $('.question').length;
+            var total1 = 0;
+            var total2 = 0;
+            var total3 = 0;
+            var total4 = 0;
+            var total5 = 0;
+            var selections=0;
+            var CurrQ =0;
+            var MyQ=$('section.q-n-a');
+
+            MyQ.each(function(index){
+                var MyA=$(this).find('.answer');
+                //$(this).find('.answer').html(MyA);
+                $(this).attr('id',index+1);
+                if (index == 0){
+                    $(this).find('.previous').remove();
+                }
+            })
+
+            function showQ(){
+                $('section.q-n-a').hide();
+                CurrQ++;
+                if($('#'+CurrQ).length>0){
+                    if ($('#'+CurrQ).fadeIn(200));
+                }else{
+                    $('.finish').fadeIn();
+
+                }
+            }
+            showQ();
+            $('.previous, .next, .missed').click(function(){
+                if ($(this).hasClass('previous')){
+                    CurrQ-=2;
+                }
+                else if($(this).hasClass('missed')){
+                    CurrQ=0;
+                    $('.response, .finish, .missed').hide();
+                }
+                showQ();
+
+            })
+
+
+            
+            //only one answer per question!!!!!!!!!!!!!!
+            $('.answer').on('click',function(){
+                if($(this).parent().find('.selected').length>0){
+                    if(($(this).parent().data('value')==1)){
+                        total1-=$(this).parent().find('.selected').data('value');}
+                    else if(($(this).parent().data('value')==2)){
+                        total2-=$(this).parent().find('.selected').data('value');}
+                    else if(($(this).parent().data('value')==3)){
+                        total3-=$(this).parent().find('.selected').data('value');}
+                    else if(($(this).parent().data('value')==4)){
+                        total4-=$(this).parent().find('.selected').data('value');}
+                    else if(($(this).parent().data('value')==5)){
+                        total5-=$(this).parent().find('.selected').data('value');}
+                    $(this).parent().find('.selected').removeClass('selected');
+                    selections-=1;
+                }
+                //remmeber the if are here!!!!!!!!!!!!!!!!!!!!!!!!
+                // you need 5 ifs 5 totals!!!!!!!!!!!!!!!!!!!!!
+                if(($(this).parent().data('value')==1)){
+                    $(this).addClass( 'selected' );
+                    selections+=1;
+                    total1 += $(this).data( 'value' );}
+                else if(($(this).parent().data('value')==2)){
+                    $(this).addClass( 'selected' );
+                    selections+=1;
+                    total2 += $(this).data( 'value' );}
+                else if(($(this).parent().data('value')==3)){
+                    $(this).addClass( 'selected' );
+                    selections+=1;
+                    total3 += $(this).data( 'value' );}
+                else if(($(this).parent().data('value')==4)){
+                    $(this).addClass( 'selected' );
+                    selections+=1;
+                    total4 += $(this).data( 'value' );}
+                else if (($(this).parent().data('value')==5)){
+                    $(this).addClass( 'selected' );
+                    selections+=1;
+                    total5 += $(this).data( 'value' );
+                 }
+                console.log(total1);
+                console.log(total2);
+                console.log(total3);
+                console.log(total4);
+                console.log(total5);
+                console.log(selections);
+                
+
+            })
+            $('.finish').on('click', function(){
+                var msg1 ='';
+                var msg2 ='';
+                var msg3 ='';
+                var msg4 ='';
+                var msg5 ='';
+                if(selections === questions){
+                    if (total1<15){msg1='==>>ETRAVERSION:::::::vous êtes introverti(e) et peu expansif(ve) Vous avez tendance à être calme, modéré(e) et peu impliqué(e) dans la vie des autres. Plutôt timide, effacé(e) et silencieux(se) en groupe, vous préférez le plus souvent vous consacrer à des activités solitaires et être seul(e). \n';}
+                    else {msg1='==>>ETRAVERSION:::::::vous êtes plein(e) d’énergie et éprouvez des émotions positives. Vous avez tendance à être loquace, actif(ve), voire exubérant(e). Vous êtes très à l’aise en groupe et puisez votre dynamisme dans l’interaction avec les autres. Vous parlez et vous affirmez facilement, et attirez l’attention sur vous. Vous vous montrez enthousiaste pour des projets excitants. \n';}
+                
+                    if (total2<15){msg2='==>>AGREABILITE::::::vous avez tendance à être sceptique et à douter desintentions d’autrui. Vous préférez entrer en compétition plutôt que de coopérer, et défendez davantage vos intérêts que ceux du groupe. Vous êtes en général distant(e) et peu sensible au bien-être d’autrui,ce qui donne parfois l’impression que vous êtes centré(e) sur vous.';}
+                    else {msg2='==>>AGREABILITE::::::vous êtes prévenant(e), serviable et disposé(e) à trouver un terraind’entente en cas de conflit. Honnête et droit(e), vous êtes digne de confiance et foncièrement généreux(se) et altruiste. Sympathique, respectueux(se) et amical(e), vous vous entendez bien avec les autres. Vous acceptez les autres dans leurs différences, sans critique. Sensible, indulgent(e) de nature, vous êtes doué(e) de compassion et pensez que les autres le sont également.';} 
+
+                    if (total3<15){msg3='==>>Caractère consciencieux::::::::'+'vous éprouvez beaucoup de plaisir à pratiquer des activités de courte durée, et avez des difficultés à rester concentré(e) sur vos objectifs. Impulsif(ve),vous êtes perçu(e) comme une personne amusante et boute-en-train en société. Vous ne savez pastoujours respecter les limites, ce qui peut vous rendre irréfléchi(e), dispersé(e), voire imprudent(e).Vous ne pensez parfois pas aux conséquences de vos paroles, de vos actes, ce qui peut entraver votre réussite, notamment au travail. \n';}
+                    else {msg3='==>>Caractère consciencieux::::::::'+'vous êtes prudent(e), réfléchi(e), fiable et savez éviter les difficultés. Vous atteignez facilement vos objectifs grâce à vos capacités d’anticipation et d’organisation. Vous êtes perspicace et déterminé(e). Parfois, vous êtes très perfectionniste, soucieux(se) de l’ordre dans vos tâches et au travail. \n';}
+
+                    if (total4<15){msg4='==>>Névrosisme::::::::::'+'vous êtes émotionnellement stable. Vous êtes en général calme, d’humeur égale et détendu(e). Vous affrontez les situations stressantes sans vous déstabiliser, sans inquiétude et avec confiance. Vous prenez le temps d’interpréter les événements avec discernement et agissez de façon raisonnée, non impulsive. Vous avez tendance à éprouver peu d’émotions négatives. \n';}
+                    else {msg4='==>>Névrosisme::::::::::'+'vous éprouvez souvent de l’anxiété, de la colère ou de la peur. Vous êtes très réactif(ve) sur le plan émotionnel, voire instable, avec une humeur changeante et négative. Vous avez tendance à interpréter des situations ordinaires comme menaçantes, et des événements mineurs comme insurmontables. Vous êtes souvent tendu(e) et avez en général beaucoup de difficultés à gérer le stress de la vie quotidienne. Vos émotions peuvent entraver votre capacité à raisonner et votre lucidité, d’où parfois des prises de décisions inadaptées. Vous avez aussi tendance à être triste et déprimé(e). \n';}
+
+                    if (total5<15){msg5='==>>Ouverture à l’expérience::::::::::'+'vous avez tendance à être terre à terre, conventionnel(le) et fuyez l’originalité, l’extravagance. Vous écoutez assez peu vos sentiments et émotions, vous êtes plutôt centré(e) sur vos objectifs. Vous privilégiez les aspects pratiques et les choses qui ont déjà fait leurs preuves. Vous avez peu de centres d’intérêt et portez assez peu d’attention aux activités artistiques, esthétiques, scientifiques et métaphysiques. Vous appréciez davantage un environnement familier et êtes routinier(ère). Vos habitudes vous rassurent, alors que le changement et la nouveauté peuvent vous inquiéter. \n';}
+                    else {msg5='==>>Ouverture à l’expérience::::::::::'+'vous êtes curieux(se), inventif(ve) et imaginatif(ve). Vous appréciez l’art,les activités diversifiées et non conventionnelles. Vous êtes davantage attiré(e) par la complexité, le sens caché des événements, l’ambiguïté, que par les évidences. Vous aimez jouer avec les idées, avoir des discussions profondes et existentielles avec vos amis. La nouveauté, le changement ainsi que la différence chez autrui guident vos intérêts et vos actions. Vous écoutez vos sentiments et avez tendance à penser et à agir de façon personnelle, voire non conformiste (vous êtes indépendant(e) dans vos jugements). \n';}
+                    $('#quiz-area,.finish').hide(); 
+                }
+                else{
+                    msg1='you have missed at least one question!';
+                    $('.missed').show();
+                }
+
+            $('.response p').text(msg1+msg2+msg3+msg4+msg5);
+            $('.response ').show();    
+
+            //alert(msg1+msg2);
+        })
+            
+
+
+
+        </script>
+    </body>
+</html>
